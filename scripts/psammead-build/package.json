@@ -1,0 +1,40 @@
+{
+  "name": "@bbc/psammead-build",
+  "version": "0.1.0",
+  "description": "build that",
+  "main": "index.js",
+  "bin": {
+    "psammead-build": "./index.js"
+  },
+  "dependancies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-styled-components": "^1.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/scripts/psammead-build"
+  },
+  "author": {
+    "name": "BBC Psammead Maintainers",
+    "email": "PsammeadMaintainers@bbc.co.uk"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bbc/psammead/issues"
+  },
+  "homepage": "https://github.com/bbc/psammead/blob/latest/scripts/psammead-build/README.md",
+  "keywords": [
+    "build",
+    "babel"
+  ],
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "glob": "^7.1.3"
+  }
+}
