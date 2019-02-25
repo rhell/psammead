@@ -4,7 +4,9 @@
   "description": "React styled component for a sitewide-links",
   "main": "dist/index.js",
   "scripts": {
-    "build": "psammead-build"
+    "build": "psammead-build",
+    "test": "psammead-test-jest && echo 'YAY'",
+    "test-c": "psammead-test-jest-c"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,6 @@
   "dependencies": {
     "@bbc/gel-foundations": "^0.1.2",
     "@bbc/psammead-styles": "^0.1.3",
-    "@bbc/psammead-build": "0.1.0",
     "nanoid": "^2.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
