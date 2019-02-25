@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "psammead-build",
-    "test": "psammead-test-jest && echo 'YAY'",
-    "test-c": "psammead-test-jest-c"
+    "test": "psammead-test-jest",
+    "lint": "psammead-lint"
   },
   "repository": {
     "type": "git",
