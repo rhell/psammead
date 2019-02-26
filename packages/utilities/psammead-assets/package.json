@@ -6,6 +6,11 @@
     "type": "git",
     "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/psammead-assets"
   },
+  "scripts": {
+    "build": "psammead-build",
+    "test": "psammead-test-jest",
+    "lint": "psammead-lint"
+  },
   "author": {
     "name": "Psammead Maintainers",
     "email": "PsammeadMaintainers@bbc.co.uk"
@@ -23,6 +28,9 @@
     "amp"
   ],
   "devDependencies": {
-    "@bbc/psammead-test-helpers": "^0.3.0"
+    "@bbc/psammead-test-helpers": "^0.3.0",
+    "@bbc/psammead-build": "dr3/testing#psammead-build",
+    "@bbc/psammead-test-jest": "dr3/testing#psammead-test-jest",
+    "@bbc/psammead-lint": "dr3/testing#psammead-lint"
   }
 }

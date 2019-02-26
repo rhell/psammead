@@ -6,6 +6,11 @@
     "type": "git",
     "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/psammead-styles"
   },
+  "scripts": {
+    "build": "psammead-build",
+    "test": "psammead-test-jest",
+    "lint": "psammead-lint"
+  },
   "author": {
     "name": "BBC Psammead Maintainers",
     "email": "PsammeadMaintainers@bbc.co.uk"
@@ -24,6 +29,9 @@
     "fonts"
   ],
   "devDependencies": {
-    "@bbc/psammead-test-helpers": "^0.3.0"
+    "@bbc/psammead-test-helpers": "^0.3.0",
+    "@bbc/psammead-build": "dr3/testing#psammead-build",
+    "@bbc/psammead-test-jest": "dr3/testing#psammead-test-jest",
+    "@bbc/psammead-lint": "dr3/testing#psammead-lint"
   }
 }

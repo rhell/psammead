@@ -8,10 +8,18 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {
+    "build": "psammead-build",
+    "test": "psammead-test-jest",
+    "lint": "psammead-lint"
+  },
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
-    "styled-components": "^3.4.0"
+    "styled-components": "^3.4.0",
+    "@bbc/psammead-build": "dr3/testing#psammead-build",
+    "@bbc/psammead-test-jest": "dr3/testing#psammead-test-jest",
+    "@bbc/psammead-lint": "dr3/testing#psammead-lint"
   },
   "gitHead": "14d506c568ba7109cb7d306ed2cecb1cca243a1d"
 }

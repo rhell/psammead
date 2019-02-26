@@ -7,6 +7,11 @@
     "type": "git",
     "url": "https://github.com/bbc/psammead/tree/latest/packages/utilities/psammead-test-helpers"
   },
+  "scripts": {
+    "build": "psammead-build",
+    "test": "psammead-test-jest",
+    "lint": "psammead-lint"
+  },
   "author": {
     "name": "Psammead Maintainers",
     "email": "PsammeadMaintainers@bbc.co.uk"
@@ -26,6 +31,9 @@
   ],
   "dependencies": {
     "jest-styled-components": "^6.3.1",
-    "react-test-renderer": "^16.6.3"
+    "react-test-renderer": "^16.6.3",
+    "@bbc/psammead-build": "dr3/testing#psammead-build",
+    "@bbc/psammead-test-jest": "dr3/testing#psammead-test-jest",
+    "@bbc/psammead-lint": "dr3/testing#psammead-lint"
   }
 }
