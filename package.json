@@ -4,18 +4,17 @@
   "description": "Core Components Library Developed & Maintained By The Articles and Reach & Languages Team",
   "main": "index.js",
   "scripts": {
-    "build": "lerna run build",
+    "build": "npx lerna exec npm run build",
     "ci:packages": "npm ci && lerna exec npm ci",
     "deploy-storybook": "build-storybook -o storybook_dist && gh-pages -d storybook_dist",
     "force-package-lock-https": "find . -type f -name \"package-lock.json\" | grep -v node_modules | xargs -I % sh -c 'echo \"Replacing http->https in %\"; sed -i \"\" -e \"s/http:\\/\\//https:\\/\\//g\" %'",
     "install:packages": "npm install && lerna exec npm install",
     "postshrinkwrap": "if test -z $CI; then \n npm run force-package-lock-https \n fi",
-    "prepublishOnly": "npm run build",
-    "publish": "node scripts/publish",
+    "publish": "npm run build && node scripts/publish",
     "storybook": "NODE_ENV=development start-storybook -p 8080 -c .storybook",
     "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "npx lerna exec --concurrency 1 -- npm run lint",
-    "test:unit": "npx lerna exec --concurrency 1 -- npm run test"
+    "test:lint": "lerna exec --concurrency 1 -- npm run lint",
+    "test:unit": "npm run build && lerna exec --concurrency 1 -- npm run test"
   },
   "repository": {
     "type": "git",
