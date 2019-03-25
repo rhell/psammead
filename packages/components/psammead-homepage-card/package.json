@@ -1,0 +1,15 @@
+{
+  "name": "@bbc/psammead-homepage-card",
+  "version": "0.0.0",
+  "description": "React component to be used on an index for displaying stories",
+  "main": "src/index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/psammead/tree/latest/packages/components/psammead-homepage-card"
+  },
+  "author": "Psammead Maintainers",
+  "license": "Apache-2.0"
+}
