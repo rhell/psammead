@@ -1,0 +1,25 @@
+.gs-o-faux-block-link {
+  position: relative;
+}
+
+.gs-o-faux-block-link a,
+.gs-o-faux-block-link abbr[title] {
+  position: relative;
+  z-index: 2;
+}
+
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay-link {
+  position: static;
+}
+
+.gs-o-faux-block-link .gs-o-faux-block-link__overlay-link:before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}

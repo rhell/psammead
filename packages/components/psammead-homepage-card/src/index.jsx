@@ -1,13 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { C_SHADOW, C_CLOUD_DARK, C_RHINO } from '@bbc/psammead-styles/colours';
+import {
+  C_SHADOW,
+  C_CLOUD_DARK,
+  C_RHINO,
+  C_EBON,
+  C_POSTBOX,
+} from '@bbc/psammead-styles/colours';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import {
   GEL_BODY_COPY,
   GEL_FF_REITH_SERIF,
   GEL_FF_REITH_SANS,
 } from '@bbc/gel-foundations/typography';
+
+import '../test.css';
 
 const IndexCardStyled = styled.div`
   color: ${C_SHADOW};
@@ -17,8 +25,25 @@ const IndexCardStyled = styled.div`
   display: inline-block;
 `;
 
-const Story = styled.div`
+const Story = styled.a`
   font-family: ${GEL_FF_REITH_SANS};
+  text-decoration: none;
+  color: ${C_EBON};
+
+  &:visited {
+    color: ${C_CLOUD_DARK};
+    border-bottom: 1px solid ${C_CLOUD_DARK};
+  }
+
+  &:focus {
+    color: ${C_POSTBOX};
+    border-bottom: 2px solid ${C_POSTBOX};
+  }
+
+  &:hover {
+    color: ${C_POSTBOX};
+    border-bottom: 2px solid ${C_POSTBOX};
+  }
 `;
 
 const Headline = styled.div`
@@ -48,10 +73,10 @@ const Image = styled.img`
   max-width: 30%;
 `;
 
-const IndexCard = ({ imgSrc, headline, intro, timestamp }) => (
-  <IndexCardStyled>
+const IndexCard = ({ imgSrc, href, headline, intro, timestamp }) => (
+  <IndexCardStyled className="gs-o-faux-block-link">
     <Image src={imgSrc} />
-    <Story>
+    <Story href={href} className="gs-o-faux-block-link__overlay-link">
       <Headline>{headline}</Headline>
       <Intro>{intro}</Intro>
       <TimeStamp>{timestamp}</TimeStamp>
@@ -61,6 +86,7 @@ const IndexCard = ({ imgSrc, headline, intro, timestamp }) => (
 
 IndexCard.propTypes = {
   imgSrc: string.isRequired,
+  href: string.isRequired,
   headline: string.isRequired,
   intro: string.isRequired,
   timestamp: string.isRequired,
